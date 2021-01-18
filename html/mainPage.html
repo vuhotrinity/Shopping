@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/mainPage.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- navigation bar -->
+    <div id='navigation-container' class="navigation-container">
+        
+        <a  href = "#">Main</a>
+        <a  href="#"> Product</a>
+        <a  href="#"> Contact</a>
+  
+
+        <button id='cart-button' onclick="changePage()" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span id="cart-number">0</span>
+            
+        </button>
+
+
+        <input type="text" placeholder="Search">
+    </div>
+
+    <!-- header -->
+    <div class='header'>
+
+    <h1>MOBILE SHOP</h1>
+    <div id="headLine"></div>
+
+    </div>
+    
+
+
+    <!-- Product -->
+    <div id="product-container" class="product-container">
+        <div  class="product-show">
+            <img src="http://dummyimage.com/150x150.png/ff4444/ffffff" alt="">
+            <div id='name'>Iphone X</div>
+            <div>100000 VND</div>
+            <button class="btnAddCart" onclick="clickCart('Iphone X')">Add To Cart</button>
+        </div>
+
+
+    </div>
+    <script src="https://kit.fontawesome.com/3604d69a46.js" crossorigin="anonymous"></script>
+    <script src="../js/mainPage.js"></script>
+
+</body>
+</html>

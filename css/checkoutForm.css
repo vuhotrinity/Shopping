@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.navigation-container{
+    background-color: gray;
+    height: 50px;
+}
+.navigation-container a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 27px;
+    margin-left: 20px;
+    
+}
+.navigation-container :hover{
+    background-color: white;
+    color: grey;
+}
+.navigation-container button{
+    float: right;
+    margin-right: 60px;
+    font-size: 30px;
+    background-color: grey;
+    cursor: pointer;
+    border: none;
+}
+
+.navigation-container input[type=text] {
+height: 40px;
+float: right;
+margin-right: 10px;
+border: none;
+}
+.header h1 {
+    text-align: center;
+    font-size: 70px;
+    margin-top: 10px;
+}
+.header div {
+    height: 50px;
+    background-color: grey;
+}
+
+#table {
+    margin: 25px auto;
+    border-collapse: collapse;
+    margin-top: 40px;
+    min-width: 400px;
+    border-radius: 10px ;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0,0, 0.15);
+    
+}
+#table th, td {
+    font-size: 30px;
+    padding: 30px;
+    text-align: center;
+
+}
+#table th {
+    background-color: cornflowerblue;
+    color: white;
+    
+}
+#table td {
+    /* padding: 12px 15px; */
+}
+#table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+#table tbody tr button {
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: grey;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 10px;
+}
+#table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+.table:last-of-type{
+    border-bottom: 3px solid cornflowerblue;
+}
+
+h4{
+    text-align: center;
+    font-size: 25px;
+}
