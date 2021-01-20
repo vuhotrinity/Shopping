@@ -1,53 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.css"
+      integrity="sha512-MpdEaY2YQ3EokN6lCD6bnWMl5Gwk7RjBbpKLovlrH6X+DRokrPRAF3zQJl1hZUiLXfo2e9MrOt+udOnHCAmi5w=="
+      crossorigin="anonymous"
+    />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/mainPage.css">
+    <link rel="stylesheet" href="../css/mainPage.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- navigation bar -->
-    <div id='navigation-container' class="navigation-container">
-        
-        <a  href = "#">Main</a>
-        <a  href="#"> Product</a>
-        <a  href="#"> Contact</a>
-  
+    <div id="navigation-container" class="navigation-container">
+      <a href="../html/mainPage.html">Main</a>
+      <a href="#"> Product</a>
+      <a href="#"> Contact</a>
 
-        <button id='cart-button' onclick="changePage()" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span id="cart-number">0</span>
-            
-        </button>
+      <button id="cart-button" onclick="changePage()" type="submit">
+        <i class="fa fa-shopping-cart" aria-hidden="true"> </i>
+        <span id="cart-number">0</span>
+      </button>
 
-
-        <input type="text" placeholder="Search">
+      <input
+        id="mySearch"
+        type="text"
+        placeholder="Search"
+        onkeyup="myFunction()"
+      />
     </div>
 
     <!-- header -->
-    <div class='header'>
-
-    <h1>MOBILE SHOP</h1>
-    <div id="headLine"></div>
-
+    <div class="header">
+      <h1>MOBILE SHOP</h1>
+      <br /><br /><br />
+      <br />
+      <br />
+      <!-- <div id="headLine"></div> -->
     </div>
-    
-
 
     <!-- Product -->
     <div id="product-container" class="product-container">
-        <div  class="product-show">
-            <img src="http://dummyimage.com/150x150.png/ff4444/ffffff" alt="">
-            <div id='name'>Iphone X</div>
-            <div>100000 VND</div>
-            <button class="btnAddCart" onclick="clickCart('Iphone X')">Add To Cart</button>
-        </div>
-
-
+      <div class="product-show">
+        <img src="http://dummyimage.com/150x150.png/ff4444/ffffff" alt="" />
+        <div id="name"></div>
+        <div></div>
+        <button class="btnAddCart" onclick="clickCart('Iphone X')"></button>
+      </div>
     </div>
-    <script src="https://kit.fontawesome.com/3604d69a46.js" crossorigin="anonymous"></script>
-    <script src="../js/mainPage.js"></script>
 
-</body>
+    <footer style="background-color: grey">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">CONTACT</div>
+
+          <div class="col-sm-6">SOCIAL MEDIA</div>
+        </div>
+        <div class="row-second">
+          <div class="col-sm-6">
+            <i class="fas fa-mail-bulk" style="color: white"></i>
+            <span>vuho23123@gmail.com</span>
+          </div>
+          <div class="col-sm-6">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-github"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"
+      integrity="sha512-JnjG+Wt53GspUQXQhc+c4j8SBERsgJAoHeehagKHlxQN+MtCCmFDghX9/AcbkkNRZptyZU4zC8utK59M5L45Iw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/3604d69a46.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+
+    <script src="../js/mainPage.js"></script>
+  </body>
 </html>

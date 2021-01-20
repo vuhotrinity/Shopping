@@ -72,7 +72,7 @@
     "incart":"0"
 
   }, {
-    "img": "https://lh3.googleusercontent.com/proxy/7ilHN7AFD2cqF62RiXzxrvGcsGHWwqYXlyXBBjId8WC_ryi_BqOWmocB_C1TvDcS0cZc6x_zUk1RSckjRJQSqfNkffGsIE1O1eX0Fcximv_Gc-gGOkPc6Uv5CAmQQ6FL1Do1UQ9sPpY",
+    "img": "https://cdn1.viettelstore.vn/images/Product/ProductImage/small/1326615767.jpeg",
     "name": "NOKIA 5310 DS",
     "price": "200000 ",
     "incart":"0"
@@ -127,6 +127,8 @@
       cartNumbers();
       setItems(myPhone);
       totalCost(myPhone);
+      alertify.success('ADDED SUCCESSFULLY'); 
+
       // addBtn(myPhone)
 
       
@@ -211,7 +213,46 @@
 //  console.log(document.getElementById('cart-button'));
 //  window.onload.href ="../html/checkoutForm.html"
 function changePage(){
+  if(document.getElementById('cart-number').textContent == 0){
+alertify.alert("You need to pick your products first!!")  }
+else{
   window.location.href ="../html/checkoutForm.html"
-} 
+} }
 
+
+function myFunction(){
   
+  
+  let input = document.getElementById('mySearch');
+  
+  let productContainer = document.getElementById('product-container');
+  productContainer.innerHTML = ""
+  let filter = input.value.toUpperCase();
+  for(let i=0;i<listPhones.length;i++){
+    let phone = listPhones[i]
+    if(phone.name.toUpperCase().indexOf(filter)> -1){
+      function formatNumber (num) {
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+    }
+    
+      let HTML =`
+      <div  class="product-show">
+      <img src="${phone.img}" alt="">
+          <div id='name'>${phone.name}</div>
+          <div>${formatNumber(phone.price)} VND</div>
+          <button class="btnAddCart" onclick="clickCart('${phone.name}')">Add To Cart</button>
+          </div>
+
+      
+      `
+      productContainer.innerHTML+= HTML
+
+
+    }
+    else if(filter ==''){
+      displayListPhones();
+    }
+  }
+}
+
+//style lai cac the phone de no dung canh nhau

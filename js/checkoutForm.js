@@ -13,7 +13,9 @@ function displayCart() {
             
         </button>
     `;
+    
   navigationContainer.innerHTML += HTML;
+  
 }
 displayCart();
 
@@ -60,28 +62,48 @@ function displayTotal() {
 displayTotal();
 let newName = document.getElementById("name");
 
-function deleteProducts() {
-  console.log(document.getElementById("row"));
-}
+
 
 function deleteProducts(productName) {
+  let deleteBtn = document.getElementById('deleteBtn');
   let cartItems = localStorage.getItem("productsInCart");
-  // console.log(insideValue)
   cartItems = JSON.parse(cartItems);
-
-  console.log(cartItems); //new cart
+  let newPhone = document.getElementById("list-phones");
+  console.log(newPhone)
   for (let i = 0; i < Object.values(cartItems).length; i++) {
     let newCart = Object.values(cartItems)[i];
-    if (productName == newCart.name) {
-      // console.log( newCart)
-      //    ;
-      localStorage.removeItem('productsIncart'[productName])
-          console.log( cartItems);
-          // localStorage.removeItem('${Object.keys(cartItems)[0]}')
-      //     localStorage.removeItem('IPHONE X')
-      //     // console.log(newCart )
-      console.log(newCart )
-    } else {
-    }
+    console.log(newPhone)
+
+    if (productName == newCart.name ) {
+      
+         
+         
+         
+
+       
+      let totalMoney = localStorage.getItem('totalCost');
+
+
+     totalMoney = JSON.parse(totalMoney);
+     totalMoney = totalMoney - ((cartItems[productName]).price  * (cartItems[productName]).incart );
+     localStorage.setItem('totalCost', JSON.stringify(totalMoney))
+
+
+     let cart = localStorage.getItem('cartNumbers');
+      cart = JSON.parse(cart);
+      cart = cart - (cartItems[productName]).incart;
+      localStorage.setItem('cartNumbers',cart)
+     delete cartItems[productName];
+     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+     alertify.success("DELETE SUCCESSFULLY!");
+     
+      
+     
+     
+     
+   
+     }
   }
 }
+
+
