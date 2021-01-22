@@ -114,6 +114,16 @@
         
       }
   }
+
+  
+
+
+
+
+
+
+
+
   displayListPhones()
 
   let number = document.getElementById("cart-number").textContent

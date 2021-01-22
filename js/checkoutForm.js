@@ -70,14 +70,16 @@ function deleteProducts(productName) {
   cartItems = JSON.parse(cartItems);
   let newPhone = document.getElementById("list-phones");
   console.log(newPhone)
+  let tr = document.getElementsByTagName('tr')[1];
+  console.log(tr)
+  
   for (let i = 0; i < Object.values(cartItems).length; i++) {
     let newCart = Object.values(cartItems)[i];
-    console.log(newPhone)
 
     if (productName == newCart.name ) {
       
-         
-         
+
+    
          
 
        
@@ -96,7 +98,8 @@ function deleteProducts(productName) {
      delete cartItems[productName];
      localStorage.setItem('productsInCart', JSON.stringify(cartItems));
      alertify.success("DELETE SUCCESSFULLY!");
-     
+     window.location.reload();
+
       
      
      
